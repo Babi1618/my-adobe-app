@@ -9,6 +9,7 @@ export const StyledModalLinkContainer = styled.div<any>`
   padding: 8px 32px 4px;
   &:hover {
     background-color: #f5f5f5;
+    background-color: ${({ primary }) => (!primary ? "#f5f5f5" : "inherit")};
   }
 `;
 export const StyledModalLinkImageContainer = styled.div``;
@@ -22,6 +23,7 @@ export const StyledModalLinkTextAndDescription = styled.div`
 export const StyledModalLinkText = styled.div<any>`
   color: #2c2c2c;
   font-size: 14px;
+  color: ${({ primary }) => (primary ? "#1473E6" : "#2c2c2c")};
 `;
 export const StyledModalLinkDescription = styled.div`
   color: #656565;

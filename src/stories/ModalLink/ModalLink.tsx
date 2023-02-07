@@ -9,12 +9,12 @@ import {
 export const ModalLink = ({ img, text, description, altImg, primary }: any) => {
   console.log(primary);
   return (
-    <StyledModalLinkContainer primary>
+    <StyledModalLinkContainer primary={primary}>
       {img && (
         <StyledModalLinkImage alt={altImg ? altImg : "Image"} src={img} />
       )}
       <StyledModalLinkTextAndDescription>
-        {text && <StyledModalLinkText>{text}</StyledModalLinkText>}
+        {text && <StyledModalLinkText primary={primary}>{text}</StyledModalLinkText>}
         {description && (
           <StyledModalLinkDescription>{description}</StyledModalLinkDescription>
         )}
