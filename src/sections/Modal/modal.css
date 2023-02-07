@@ -1,0 +1,13 @@
+.modal-background{
+    background: #000;
+    opacity: .5;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:64px
+}
+.modal-container{
+    position:relative; 
+    background-color: #f4f4f4;
+}

@@ -4,10 +4,9 @@ import { NavlinkArrowLeft } from "../../stories/Navlink/Navlink.stories";
 // import { NavlinkArrowLeft } from "../../stories/Navlink/Navlink";
 import "./navbar.css";
 
-export const Navbar = ({ isMobile }: any) => {
-  const prova = () => {
-    console.log("TODO");
-  };
+export const Navbar = ({ isMobile, linkSelected, setLinkSelected }: any) => {
+  console.log(setLinkSelected);
+  
   return (
     <div className="navbar-container">
       <div>
@@ -20,22 +19,22 @@ export const Navbar = ({ isMobile }: any) => {
         </div>
         <NavlinkArrowLeft
           text="Creativity"
-          onClick={() => console.log("Creativity")}
+          setLinkSelected={setLinkSelected}
           arrowLeft
         />
         <NavlinkArrowLeft
           text="PDF & E-Signature"
-          onClick={() => console.log("PDF & E-Signature")}
+          setLinkSelected={setLinkSelected}
           arrowLeft
         />
         <NavlinkArrowLeft
           text="Marketing & Commerce"
-          onClick={() => console.log("Marketing & Commerce")}
+          setLinkSelected={setLinkSelected}
           arrowLeft
         />
         <NavlinkArrowLeft
           text="Help & Support"
-          onClick={() => console.log("Help & Support")}
+          setLinkSelected={setLinkSelected}
           arrowLeft
         />
       </div>
