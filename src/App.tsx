@@ -25,15 +25,15 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <>
       <Navbar
         isMobile={isMobile}
         linkSelected={linkSelected}
         setLinkSelected={setLinkSelected}
       />
-      <Main />
-      {linkSelected && <Modal />}
-    </div>
+      {/* <Main /> */}
+      <Modal />
+    </>
   );
 }
 

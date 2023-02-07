@@ -1,9 +1,10 @@
+import { ModalLink } from "../../stories/ModalLink/ModalLink";
 import "./modalSection.css";
 
 export const ModalSection = () => {
   return (
     <div>
-      <ModalSection />
+      <ModalLink />
     </div>
   );
 };

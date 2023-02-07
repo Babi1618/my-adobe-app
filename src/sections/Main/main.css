@@ -1,6 +1,7 @@
 .main-container {
   height: 100%;
-  position: relative;
+  /* position: relative; */
+  z-index:-4
 }
 
 .main-container > img {
