@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import { Main } from "./sections/Main/Main";
 import { Modal } from "./sections/Modal/Modal";
-import { Navbar } from "./sections/Navbar/Navbar";
+import { Navbar } from "./stories/Navbar/Navbar";
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);

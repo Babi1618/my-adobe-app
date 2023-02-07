@@ -2,10 +2,17 @@
   padding: 0 20px;
   display: flex;
   width: fit-content;
+  height: 100%;
   color: #2c2c2c;
   font-weight: 400;
   font-size: 14px;
   align-items: center;
+  font-family: adobe-clean, Helvetica, Arial, sans-serif;
+  min-height: 64px;
+}
+
+.navlink-container:hover {
+  background-color: #f4f4f4;
 }
 
 .arrow {
@@ -22,7 +29,7 @@
   transition: transform 0.1s ease;
   width: 6px;
 }
-.arrow-down{
-  transform: rotate(45deg);
 
+.arrow-down {
+  transform: rotate(45deg);
 }
