@@ -33,3 +33,9 @@ Primary.args = {
   primary: true,
   text: "prova",
 };
+
+export const Title = Template.bind({});
+Title.args = {
+  text: "title",
+  type:"title"
+};
