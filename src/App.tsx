@@ -31,8 +31,7 @@ function App() {
         linkSelected={linkSelected}
         setLinkSelected={setLinkSelected}
       />
-      {/* <Main /> */}
-      <Modal />
+      <Main />
     </>
   );
 }

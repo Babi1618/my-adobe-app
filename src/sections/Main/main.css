@@ -1,9 +1,10 @@
 .main-container {
   height: 100%;
-  /* position: relative; */
-  z-index:-4
+  position: relative;
+  z-index: -4;
 }
 
 .main-container > img {
   width: 100vw;
+  
 }

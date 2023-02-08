@@ -1,19 +1,22 @@
 import { ModalLink } from "../../stories/ModalLink/ModalLink";
+import { ModalSection } from "../../stories/ModalSection/ModalSection";
 import "./modal.css";
 
 export const Modal = () => {
-  console.log("prova");
   return (
-    <div className="modal-container">
-      <div className="modal-content">
-        <ModalLink
+    <div id="navbar-modal">
+      <div className="modal-container">
+        <div className="modal-content">
+          <ModalSection />
+          {/* <ModalLink
           altImg="Creative Cloud icon"
           img="https://www.adobe.com/content/dam/cc/icons/creativecloud-app.svg"
           text="prova"
           description="desc"
-        />
+        /> */}
+        </div>
+        <div className="modal-background"></div>
       </div>
-      {/* <div className="modal-background"></div> */}
     </div>
   );
 };

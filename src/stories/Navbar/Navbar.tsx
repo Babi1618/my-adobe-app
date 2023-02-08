@@ -51,6 +51,7 @@ export const Navbar = ({ isMobile, linkSelected, setLinkSelected }: any) => {
           )}
           <Navlink text="Sign In" onClick={() => console.log("Sign in")} />
         </div>
+        <Modal/>
       </div>
     </>
   );

@@ -14,7 +14,9 @@ export const ModalLink = ({ img, text, description, altImg, primary }: any) => {
         <StyledModalLinkImage alt={altImg ? altImg : "Image"} src={img} />
       )}
       <StyledModalLinkTextAndDescription>
-        {text && <StyledModalLinkText primary={primary}>{text}</StyledModalLinkText>}
+        {text && (
+          <StyledModalLinkText primary={primary}>{text}</StyledModalLinkText>
+        )}
         {description && (
           <StyledModalLinkDescription>{description}</StyledModalLinkDescription>
         )}
