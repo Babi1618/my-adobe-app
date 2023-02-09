@@ -1,32 +1,13 @@
-import { rawListeners } from "process";
-import { ModalLink } from "../ModalLink/ModalLink";
+import { ModalLinksWrapper } from "../../sections/ModalLinksWrapper/ModalLinksWrapper";
 import "./modalSection.css";
-import {
-  StyledModalLinksWrapper,
-  StyledModalSection,
-} from "./ModalSection.styled";
+import { StyledModalSection } from "./ModalSection.styled";
 
 export const ModalSection = ({ sections }: any) => {
+  console.log(sections)
   return (
     <StyledModalSection>
-      {sections.map((el: any, i: number) => {
-        return (
-          <StyledModalLinksWrapper>
-            {el.sections.map((el: any, i: number) => {
-              return (
-                <ModalLink
-                  key={i}
-                  altImg={el.altImg}
-                  img={el.img}
-                  text={el.text}
-                  description={el.description}
-                  type={el.type}
-                  buttonType={el.buttonType}
-                />
-              );
-            })}
-          </StyledModalLinksWrapper>
-        );
+      {sections.wrapper.map((el: any, i: number) => {
+        return <ModalLinksWrapper key={i} wrapper={el} />;
       })}
     </StyledModalSection>
   );

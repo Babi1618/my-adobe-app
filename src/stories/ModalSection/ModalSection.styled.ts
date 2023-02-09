@@ -4,4 +4,3 @@ export const StyledModalSection = styled.div`
   padding-top: 40px;
   padding-bottom: 60px;
 `;
-export const StyledModalLinksWrapper = styled.div``;
