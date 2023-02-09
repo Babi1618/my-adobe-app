@@ -1,7 +1,5 @@
 import { ComponentStory } from "@storybook/react";
 import { ModalLink } from "../ModalLink/ModalLink";
-// import { OnlyText } from "../ModalLink/ModalLink.stories";
-import { OnlyTextModalLink } from "../ModalLink/ModalLink.stories";
 import { ModalLinksWrapper } from "./ModalLinksWrapper";
 
 export default {
