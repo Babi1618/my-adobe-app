@@ -1,3 +1,4 @@
+import { Button } from "../Button/Button";
 import {
   StyledModalLinkContainer,
   StyledModalLinkContent,
@@ -8,16 +9,13 @@ import {
 } from "./ModalLink.styled";
 
 export const ModalLink = ({
-  // img,
-  // text,
-  // description,
-  // altImg,
   text,
   primary,
   type,
+  buttonType,
   ...props
 }: any) => {
-  console.log(props);
+  console.log(buttonType);
   return (
     <StyledModalLinkContainer primary={primary} type={type}>
       <StyledModalLinkContent type={type}>
@@ -29,7 +27,7 @@ export const ModalLink = ({
             text={text}
           />
         ) : (
-          <div>TODO {text}</div>
+          <Button label={text} primary={buttonType === "primary" && true} />
         )}
       </StyledModalLinkContent>
     </StyledModalLinkContainer>

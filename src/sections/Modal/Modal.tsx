@@ -41,7 +41,7 @@ export const Modal = () => {
       {
         text: "View plans and pricing ",
         type: "button",
-        buttonType: "default",
+        buttonType: "primary",
       },
     ],
   };
