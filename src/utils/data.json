@@ -261,32 +261,44 @@
           "wrapper": [
             {
               "links": [
-                { "text": "title section 4", "type": "title" },
-                { "text": "cia" }
+                { "text": "Help and support", "type": "title" },
+                { "text": "text", "description": "lorem ipsum" },
+                { "text": "text", "description": "lorem ipsum" },
+                { "text": "Lorem ipsum" },
+                {
+                  "text": "Download and install ",
+                  "type": "button"
+                },
+                {
+                  "text": "Contact us ",
+                  "type": "button",
+                  "buttonType": "primary"
+                }
               ]
-            },
-            {
-              "links": [{ "text": "title", "type": "title" }, { "text": "cia" }]
             }
           ]
         },
         {
           "wrapper": [
             {
-              "links": [{ "text": "title", "type": "title" }, { "text": "cia" }]
-            },
-            {
-              "links": [{ "text": "title", "type": "title" }, { "text": "cia" }]
+              "links": [
+                { "text": "Common task", "type": "title" },
+                { "text": "Lorem ipsum" },
+                { "text": "Lorem ipsum" }
+              ]
             }
           ]
         },
         {
           "wrapper": [
             {
-              "links": [{ "text": "title", "type": "title" }, { "text": "cia" }]
-            },
-            {
-              "links": [{ "text": "title", "type": "title" }, { "text": "cia" }]
+              "links": [
+                { "text": "Learning resources", "type": "title" },
+                { "text": "text", "description": "lorem ipsum" },
+                { "text": "text", "description": "lorem ipsum" },
+                { "text": "text", "description": "lorem ipsum" },
+                { "text": "text", "description": "lorem ipsum" }
+              ]
             }
           ]
         }
