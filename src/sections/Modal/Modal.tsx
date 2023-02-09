@@ -1,8 +1,7 @@
 import { ModalSection } from "../../stories/ModalSection/ModalSection";
 import "./modal.css";
-import data from "../../utils/data.json";
 
-export const Modal = () => {
+export const Modal = ({data, linkSelected}:any) => {
   const section2 = {
     navLinkId: 1,
     sectionId: 2,
@@ -37,7 +36,6 @@ export const Modal = () => {
       },
     ],
   };
-  console.log(data.sections);
   return (
     <div id="navbar-modal">
       <div className="modal-container">

@@ -1,12 +1,21 @@
 import { useState } from "react";
 import "./navlink.css";
 
-export const Navlink = ({ text, arrowLeft, setLinkSelected }: NavlinkProps) => {
+export const Navlink = ({
+  id,
+  text,
+  arrowLeft,
+  setLinkSelected,
+  onClick,
+}: NavlinkProps) => {
   const [arrowDown, setArrowDown] = useState(true);
 
   const handleClick = () => {
-    setLinkSelected && setLinkSelected((prev: any) => (!prev ? text : null));
-    setArrowDown((prev) => !prev);
+    if (id) {
+      setLinkSelected && setLinkSelected((prev: any) => (!prev ? id : null));
+      setArrowDown((prev) => !prev);
+    } 
+    else onClick();
   };
 
   return (
@@ -20,6 +29,7 @@ export const Navlink = ({ text, arrowLeft, setLinkSelected }: NavlinkProps) => {
 };
 
 interface NavlinkProps {
+  id?: number;
   text: string;
   onClick?: any;
   arrowLeft?: boolean;

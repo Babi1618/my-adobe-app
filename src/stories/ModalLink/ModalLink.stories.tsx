@@ -10,32 +10,32 @@ const Template: ComponentStory<typeof ModalLink> = (args) => (
   <ModalLink {...args} />
 );
 
-export const Default = Template.bind({});
-Default.args = {
+export const DefaultModalLink = Template.bind({});
+DefaultModalLink.args = {
   img: "https://www.adobe.com/content/dam/cc/icons/Adobe_Corporate_Horizontal_Red_HEX.svg",
-  text: "prova",
+  text: "Testo",
   description: "descrizione",
 };
 
-export const NoImage = Template.bind({});
-NoImage.args = {
-  text: "prova",
+export const NoImageModalLink = Template.bind({});
+NoImageModalLink.args = {
+  text: "Testo",
   description: "descrizione",
 };
 
-export const OnlyText = Template.bind({});
-OnlyText.args = {
-  text: "prova",
+export const OnlyTextModalLink = Template.bind({});
+OnlyTextModalLink.args = {
+  text: "Testo",
 };
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const PrimaryModalLink = Template.bind({});
+PrimaryModalLink.args = {
   primary: true,
-  text: "prova",
+  text: "Testo",
 };
 
-export const Title = Template.bind({});
-Title.args = {
-  text: "title",
-  type:"title"
+export const TitleModalLink = Template.bind({});
+TitleModalLink.args = {
+  text: "Title",
+  type: "title",
 };

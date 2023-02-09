@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import { Main } from "./sections/Main/Main";
-import { Modal } from "./sections/Modal/Modal";
 import { Navbar } from "./stories/Navbar/Navbar";
+import data from "./utils/data.json"
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
   const [linkSelected, setLinkSelected] = useState(null);
 
-  const array = [1, 2, 3, 4];
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 1024) {
@@ -30,6 +29,7 @@ function App() {
         isMobile={isMobile}
         linkSelected={linkSelected}
         setLinkSelected={setLinkSelected}
+        data={data}
       />
       <Main />
     </>

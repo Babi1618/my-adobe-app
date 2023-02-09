@@ -1,4 +1,4 @@
-import { ModalLink } from "../../stories/ModalLink/ModalLink";
+import { ModalLink } from "../ModalLink/ModalLink";
 import { StyledModalLinksWrapper } from "./ModalLinksWrapper.styled";
 
 export const ModalLinksWrapper = ({ wrapper }: any) => {

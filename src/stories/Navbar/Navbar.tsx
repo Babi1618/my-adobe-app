@@ -4,7 +4,12 @@ import { Navlink } from "../Navlink/Navlink";
 import { NavlinkArrowLeft } from "../Navlink/Navlink.stories";
 import "./navbar.css";
 
-export const Navbar = ({ isMobile, linkSelected, setLinkSelected }: any) => {
+export const Navbar = ({
+  isMobile,
+  linkSelected,
+  setLinkSelected,
+  data,
+}: any) => {
   return (
     <>
       <div className="navbar-container">
@@ -21,21 +26,25 @@ export const Navbar = ({ isMobile, linkSelected, setLinkSelected }: any) => {
           {!isMobile && (
             <>
               <NavlinkArrowLeft
+                id={1}
                 text="Creativity"
                 setLinkSelected={setLinkSelected}
                 arrowLeft
               />
               <NavlinkArrowLeft
+                id={2}
                 text="PDF & E-Signature"
                 setLinkSelected={setLinkSelected}
                 arrowLeft
               />
               <NavlinkArrowLeft
+                id={3}
                 text="Marketing & Commerce"
                 setLinkSelected={setLinkSelected}
                 arrowLeft
               />
               <NavlinkArrowLeft
+                id={4}
                 text="Help & Support"
                 setLinkSelected={setLinkSelected}
                 arrowLeft
@@ -51,7 +60,10 @@ export const Navbar = ({ isMobile, linkSelected, setLinkSelected }: any) => {
           )}
           <Navlink text="Sign In" onClick={() => console.log("Sign in")} />
         </div>
-        <Modal/>
+        {}
+        {linkSelected && (
+          <Modal linkSlected={linkSelected} data={data.pages[0]} />
+        )}
       </div>
     </>
   );

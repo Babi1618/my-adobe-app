@@ -1,9 +1,9 @@
-import { ModalLinksWrapper } from "../../sections/ModalLinksWrapper/ModalLinksWrapper";
+import { ModalLinksWrapper } from "../ModalLinksWrapper/ModalLinksWrapper";
 import "./modalSection.css";
 import { StyledModalSection } from "./ModalSection.styled";
 
 export const ModalSection = ({ sections }: any) => {
-  console.log(sections)
+  // console.log(sections)
   return (
     <StyledModalSection>
       {sections.wrapper.map((el: any, i: number) => {

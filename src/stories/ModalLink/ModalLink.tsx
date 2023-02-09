@@ -15,7 +15,6 @@ export const ModalLink = ({
   buttonType,
   ...props
 }: any) => {
-  console.log(buttonType);
   return (
     <StyledModalLinkContainer primary={primary} type={type}>
       <StyledModalLinkContent type={type}>
