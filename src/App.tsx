@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import { Main } from "./sections/Main/Main";
 import { Navbar } from "./stories/Navbar/Navbar";
-import data from "./utils/data.json"
+import data from "./utils/data.json";
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -16,6 +16,7 @@ function App() {
         setIsMobile(false);
       }
     };
+    
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => {

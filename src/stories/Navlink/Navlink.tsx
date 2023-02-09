@@ -10,22 +10,26 @@ export const Navlink = ({
   onClick,
 }: NavlinkProps) => {
   const [arrowDown, setArrowDown] = useState(true);
-  console.log(linkSelected);
+  // console.log(linkSelected);
   const handleClick = () => {
     if (id) {
-      setLinkSelected && setLinkSelected((prev: any) => (!prev ? id : null));
-      setArrowDown((prev) => !prev);
+      setLinkSelected &&
+        setLinkSelected((prev: any) => (prev ? (prev === id ? null : id) : id));
+      // setArrowDown((prev) => !prev);
     } else onClick();
   };
-  
+
   // useEffect(() => {
   //   console.log(id, linkSelected)
+  //   if(id===linkSelected){
+
+  //   }
   // }, [id, linkSelected]);
   return (
     <div className="navlink-container" onClick={handleClick}>
       <div>{text}</div>
       {arrowLeft && (
-        <div className={`arrow ${arrowDown && "arrow-down"}`}></div>
+        <div className={`arrow ${id === linkSelected && "arrow-down"}`}></div>
       )}
     </div>
   );
