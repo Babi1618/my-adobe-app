@@ -30,23 +30,27 @@ export const Navbar = ({
                 text="Creativity"
                 setLinkSelected={setLinkSelected}
                 arrowLeft
+                linkSelected={linkSelected}
               />
               <NavlinkArrowLeft
                 id={2}
                 text="PDF & E-Signature"
                 setLinkSelected={setLinkSelected}
+                linkSelected={linkSelected}
                 arrowLeft
               />
               <NavlinkArrowLeft
                 id={3}
                 text="Marketing & Commerce"
                 setLinkSelected={setLinkSelected}
+                linkSelected={linkSelected}
                 arrowLeft
               />
               <NavlinkArrowLeft
                 id={4}
                 text="Help & Support"
                 setLinkSelected={setLinkSelected}
+                linkSelected={linkSelected}
                 arrowLeft
               />
             </>
@@ -62,7 +66,7 @@ export const Navbar = ({
         </div>
         {}
         {linkSelected && (
-          <Modal linkSlected={linkSelected} data={data.pages[0]} />
+          <Modal linkSelected={linkSelected} data={linkSelected&& data.pages[linkSelected-1]} />
         )}
       </div>
     </>

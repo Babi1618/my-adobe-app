@@ -1,7 +1,7 @@
 import { ModalSection } from "../../stories/ModalSection/ModalSection";
 import "./modal.css";
 
-export const Modal = ({data, linkSelected}:any) => {
+export const Modal = ({ data, linkSelected }: any) => {
   const section2 = {
     navLinkId: 1,
     sectionId: 2,

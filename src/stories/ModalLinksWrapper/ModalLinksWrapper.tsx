@@ -1,10 +1,10 @@
 import { ModalLink } from "../ModalLink/ModalLink";
 import { StyledModalLinksWrapper } from "./ModalLinksWrapper.styled";
 
-export const ModalLinksWrapper = ({ wrapper }: any) => {
+export const ModalLinksWrapper = ({ links }: any) => {
   return (
     <StyledModalLinksWrapper>
-      {wrapper.links.map((el: any, i: number) => {
+      {links.map((el: any, i: number) => {
         return (
           <ModalLink
             key={i}
