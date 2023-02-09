@@ -1,22 +1,22 @@
 import { ModalLink } from "../ModalLink/ModalLink";
 import "./modalSection.css";
+import { StyledModalSection } from "./ModalSection.styled";
 
-export const ModalSection = () => {
+export const ModalSection = ({ section }: any) => {
+  console.log(section);
   return (
-    <div>
-      <ModalLink
-          altImg="Creative Cloud icon"
-          img="https://www.adobe.com/content/dam/cc/icons/creativecloud-app.svg"
-          text="prova"
-          description="desc"
-        />
-              <ModalLink
-          // altImg="Creative Cloud icon"
-          // img="https://www.adobe.com/content/dam/cc/icons/creativecloud-app.svg"
-          text="title"
-          type="title"
-          // description="desc"
-        />
-    </div>
+    <StyledModalSection>
+      {section.map((el: any, i: number) => {
+        return (
+          <ModalLink
+            altImg={el.altImg}
+            img={el.img}
+            text={el.text}
+            description={el.description}
+            type={el.type}
+          />
+        );
+      })}
+    </StyledModalSection>
   );
 };

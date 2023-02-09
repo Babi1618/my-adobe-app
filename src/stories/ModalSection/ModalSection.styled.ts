@@ -1,3 +1,3 @@
 import styled from "styled-components";
 
-export const ModalSection = styled.div``
+export const StyledModalSection = styled.div``
