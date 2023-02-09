@@ -7,11 +7,13 @@ export const StyledModalLinkContainer = styled.div<any>`
   padding: 100px;
   padding: 8px 32px 4px;
   color: #2c2c2c;
+  
   &:hover {
-    /* color: "red"; */
     background-color: #f5f5f5;
     background-color: ${({ primary, type }) =>
-      !primary !== (type === "title") ? "#f5f5f5" : "inherit"};
+      (!primary !== (type === "title")) !== (type === "button")
+        ? "#f5f5f5"
+        : "inherit"};
   }
 `;
 export const StyledModalLinkContent = styled.div<any>`
@@ -30,14 +32,11 @@ export const StyledModalLinkTextAndDescription = styled.div<any>`
   flex-direction: column;
 `;
 export const StyledModalLinkText = styled.div<any>`
-  /* color: #2c2c2c; */
   font-size: 14px;
   font-weight: ${({ type }) => type === "title" && "600"};
   color: ${({ primary }) => (primary ? "#1473E6" : "#2c2c2c")};
-  /* &:hover{
-    color:"#1473e6"
-  } */
 `;
+
 export const StyledModalLinkDescription = styled.div`
   color: #656565;
   font-weight: 400;

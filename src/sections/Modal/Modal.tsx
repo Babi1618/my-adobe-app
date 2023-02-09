@@ -6,6 +6,7 @@ export const Modal = () => {
   const section = {
     navLinkId: 1,
     sectionId: 1,
+    wrapperId: 1,
     sections: [
       {
         text: "What is Creativity Cloud",
@@ -45,11 +46,47 @@ export const Modal = () => {
       },
     ],
   };
+  const section2 = {
+    navLinkId: 1,
+    sectionId: 2,
+    wrapperId: 1,
+    sections: [
+      {
+        text: "Resources",
+        type: "title",
+      },
+      {
+        text: "Resources Center",
+      },
+      {
+        text: "Customer Success Stories",
+      },
+    ],
+  };
+  const section3 = {
+    navLinkId: 1,
+    sectionId: 2,
+    wrapperId: 2,
+    sections: [
+      {
+        text: "For Customer",
+        type: "title",
+      },
+      {
+        text: "Resources Center",
+      },
+      {
+        text: "Customer Success Stories",
+      },
+    ],
+  };
   return (
     <div id="navbar-modal">
       <div className="modal-container">
         <div className="modal-content">
-          <ModalSection section={section.sections} />
+          <ModalSection sections={[section]} />
+          <ModalSection sections={[section2, section3]} />
+          {/* <ModalSection section={section.sections} /> */}
         </div>
         <div className="modal-background"></div>
       </div>
