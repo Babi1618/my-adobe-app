@@ -14,6 +14,7 @@ export const ModalLinksWrapper = ({ links }: any) => {
             description={el.description}
             type={el.type}
             buttonType={el.buttonType}
+            primary={el.type === "primary"}
           />
         );
       })}

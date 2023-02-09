@@ -50,20 +50,38 @@
         {
           "wrapper": [
             {
-              "links": [{ "text": "cia" }, { "text": "cia" }]
-            },
-            {
-              "links": [{ "text": "cia" }, { "text": "cia" }]
+              "links": [
+                {
+                  "text": "Featured products",
+                  "type": "title"
+                },
+                { "text": "text", "description": "lorem ipsum" },
+                { "text": "text", "description": "lorem ipsum" },
+                { "text": "text", "description": "lorem ipsum" },
+                { "text": "text", "description": "lorem ipsum" },
+                { "text": "text", "description": "lorem ipsum" },
+                { "text": "text", "description": "lorem ipsum" },
+                { "text": "View all product", "type": "primary" }
+              ]
             }
           ]
         },
         {
           "wrapper": [
             {
-              "links": [{ "text": "cia" }, { "text": "cia" }]
-            },
-            {
-              "links": [{ "text": "cia" }, { "text": "cia" }]
+              "links": [
+                {
+                  "text": "Explore",
+                  "type": "title"
+                },
+                { "text": "Photo" },
+                { "text": "Graphic design" },
+                { "text": "Video" },
+                { "text": "Illustration" },
+                { "text": "Social media" },
+                { "text": "3D & AR" },
+                { "text": "PDF" }
+              ]
             }
           ]
         }
@@ -76,12 +94,33 @@
           "wrapper": [
             {
               "links": [
-                { "text": "title section 2", "type": "title" },
-                { "text": "cia" }
+                {
+                  "text": "Adobe Acrobat",
+                  "description": "The complete PDF solution",
+                  "altImg": "Adobe icon",
+                  "img": "https://www.adobe.com/content/dam/cc/icons/acro_reader.svg"
+                },
+                {
+                  "text": "Acrobat plans and pricing",
+                  "type": "button",
+                  "buttonType": "primary"
+                },
+                {
+                  "text": "Students and teachers",
+                  "description": "Save over 60% on Creative Cloud"
+                },
+                {
+                  "text": "Adobe Acrobat Sign",
+                  "description": "The complete signature solution"
+                },
+                { "text": "E-signature plans and pricing ", "type": "primary" },
+
+                {
+                  "text": "Adobe Reader",
+                  "description": "View, scan and annotate PDFs"
+                },
+                { "text": "View all product", "type": "primary" }
               ]
-            },
-            {
-              "links": [{ "text": "title", "type": "title" }, { "text": "cia" }]
             }
           ]
         },
