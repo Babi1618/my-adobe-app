@@ -18,11 +18,7 @@ const wrapper = [
 
 const Template: ComponentStory<typeof ModalLinksWrapper> = (args) => {
   const { links } = args;
-  console.log(args);
-
-  return (
-    <ModalLinksWrapper links={links}/>
-  );
+  return <ModalLinksWrapper links={links} />;
 };
 
 export const Default = Template.bind({});

@@ -1,23 +1,23 @@
 import "./navlink.css";
 
 export const Navlink = ({
-  id,
+  id = null,
   text,
   arrowLeft,
   linkSelected,
   setLinkSelected,
   onClick,
 }: NavlinkProps) => {
-
-  const handleClick = () => {
-    if (id) {
-      setLinkSelected &&
-        setLinkSelected((prev: any) => (prev ? (prev === id ? null : id) : id));
-    } else onClick();
+  const handleClick = (id: number | null, setLinkSelected: any) => {
+    setLinkSelected &&
+      setLinkSelected((prev: any) => (prev ? (prev === id ? null : id) : id));
   };
 
   return (
-    <div className="navlink-container" onClick={handleClick}>
+    <div
+      className="navlink-container"
+      onClick={id !== null ? () => handleClick(id, setLinkSelected) : onClick}
+    >
       <div>{text}</div>
       {arrowLeft && (
         <div className={`arrow ${id === linkSelected && "arrow-down"}`}></div>
@@ -27,7 +27,7 @@ export const Navlink = ({
 };
 
 interface NavlinkProps {
-  id?: number;
+  id?: number | null;
   text: string;
   onClick?: any;
   arrowLeft?: boolean;

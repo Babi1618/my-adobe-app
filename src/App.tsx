@@ -16,7 +16,6 @@ function App() {
         setIsMobile(false);
       }
     };
-    
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => {

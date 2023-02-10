@@ -13,10 +13,11 @@ export const ModalLink = ({
   primary,
   type,
   buttonType,
+  onClick,
   ...props
-}: any) => {
+}: ModalLinkProps) => {
   return (
-    <StyledModalLinkContainer primary={primary} type={type}>
+    <StyledModalLinkContainer primary={primary} type={type} onClick={onClick}>
       <StyledModalLinkContent type={type}>
         {type !== "button" ? (
           <TextualModalLink
@@ -40,7 +41,7 @@ export const TextualModalLink = ({
   altImg,
   primary,
   type,
-}: any) => {
+}: TextualModalLinkProps) => {
   return (
     <>
       {img && (
@@ -59,3 +60,15 @@ export const TextualModalLink = ({
     </>
   );
 };
+
+interface ModalLinkProps {
+  text: string;
+  description?: string;
+  img?: string;
+  altImg?: string;
+  primary?: boolean;
+  type: string;
+  buttonType?: string;
+  onClick: any;
+}
+type TextualModalLinkProps = Omit<ModalLinkProps, "onClick">;

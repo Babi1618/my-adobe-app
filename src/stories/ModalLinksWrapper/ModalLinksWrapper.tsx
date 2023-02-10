@@ -2,6 +2,10 @@ import { ModalLink } from "../ModalLink/ModalLink";
 import { StyledModalLinksWrapper } from "./ModalLinksWrapper.styled";
 
 export const ModalLinksWrapper = ({ links }: any) => {
+  const handleClick = (text: string) => {
+    console.log(text);
+  };
+
   return (
     <StyledModalLinksWrapper>
       {links.map((el: any, i: number) => {
@@ -15,6 +19,7 @@ export const ModalLinksWrapper = ({ links }: any) => {
             type={el.type}
             buttonType={el.buttonType}
             primary={el.type === "primary"}
+            onClick={el.type !== "title" ? handleClick : null}
           />
         );
       })}
