@@ -1,10 +1,14 @@
+import { useCallback } from "react";
 import { ModalLink } from "../ModalLink/ModalLink";
 import { StyledModalLinksWrapper } from "./ModalLinksWrapper.styled";
 
 export const ModalLinksWrapper = ({ links }: ModalLinksWrapperProps) => {
-  const handleClick = (text: string) => {
-    console.log(text);
-  };
+  const handleClick = useCallback(
+    (text: string) => {
+      console.log(text);
+    },
+    [links]
+  );
 
   return (
     <StyledModalLinksWrapper>
@@ -19,7 +23,7 @@ export const ModalLinksWrapper = ({ links }: ModalLinksWrapperProps) => {
             type={el.type}
             buttonType={el.buttonType}
             primary={el.type === "primary"}
-            onClick={el.type !== "title" ? handleClick : null}
+            onClick={el.type !== "title" ? () => handleClick(el.text) : null}
           />
         );
       })}

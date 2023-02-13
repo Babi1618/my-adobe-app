@@ -16,8 +16,9 @@ export const ModalLink = ({
   onClick,
   ...props
 }: ModalLinkProps) => {
+
   return (
-    <StyledModalLinkContainer primary={primary} type={type} onClick={onClick}>
+    <StyledModalLinkContainer primary={primary} type={type} onClick={()=>onClick()}>
       <StyledModalLinkContent type={type}>
         {type !== "button" ? (
           <TextualModalLink
@@ -71,4 +72,5 @@ interface ModalLinkProps {
   buttonType?: string;
   onClick: any;
 }
+
 type TextualModalLinkProps = Omit<ModalLinkProps, "onClick">;
