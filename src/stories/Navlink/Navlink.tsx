@@ -1,3 +1,4 @@
+import { Dispatch, SetStateAction } from "react";
 import "./navlink.css";
 
 export const Navlink = ({
@@ -5,18 +6,28 @@ export const Navlink = ({
   text,
   arrowLeft,
   linkSelected,
-  setLinkSelected,
+  setLinkSelected = null,
   onClick,
 }: NavlinkProps) => {
-  const handleClick = (id: number | null, setLinkSelected: any) => {
+  
+  const handleClick = (
+    id: number | null,
+    setLinkSelected: Dispatch<SetStateAction<null | number>>
+  ) => {
     setLinkSelected &&
-      setLinkSelected((prev: any) => (prev ? (prev === id ? null : id) : id));
+      setLinkSelected((prev: null | number) =>
+        prev ? (prev === id ? null : id) : id
+      );
   };
 
   return (
     <div
       className="navlink-container"
-      onClick={id !== null ? () => handleClick(id, setLinkSelected) : onClick}
+      onClick={
+        setLinkSelected !== null
+          ? () => handleClick(id, setLinkSelected)
+          : onClick
+      }
     >
       <div>{text}</div>
       {arrowLeft && (
@@ -31,6 +42,6 @@ interface NavlinkProps {
   text: string;
   onClick?: any;
   arrowLeft?: boolean;
-  setLinkSelected?: any;
+  setLinkSelected?: Dispatch<SetStateAction<null | number>> | null;
   linkSelected?: null | number;
 }

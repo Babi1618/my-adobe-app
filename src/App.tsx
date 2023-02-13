@@ -5,8 +5,8 @@ import { Navbar } from "./stories/Navbar/Navbar";
 import data from "./utils/data.json";
 
 function App() {
-  const [isMobile, setIsMobile] = useState(false);
-  const [linkSelected, setLinkSelected] = useState(null);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [linkSelected, setLinkSelected] = useState<null | number>(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -22,7 +22,6 @@ function App() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
   return (
     <>
       <Navbar

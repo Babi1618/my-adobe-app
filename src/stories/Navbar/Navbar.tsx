@@ -1,3 +1,4 @@
+import { Dispatch, DispatchWithoutAction, SetStateAction } from "react";
 import { SearchIcon } from "../../icons/SearchIcon";
 import { Modal } from "../../sections/Modal/Modal";
 import { Navlink } from "../Navlink/Navlink";
@@ -9,7 +10,7 @@ export const Navbar = ({
   linkSelected,
   setLinkSelected,
   data,
-}: any) => {
+}: NavbarProps) => {
   return (
     <>
       <div className="navbar-container">
@@ -66,9 +67,19 @@ export const Navbar = ({
         </div>
         {}
         {linkSelected && (
-          <Modal linkSelected={linkSelected} data={linkSelected&& data.pages[linkSelected-1]} />
+          <Modal
+            linkSelected={linkSelected}
+            data={linkSelected && data.pages[linkSelected - 1]}
+          />
         )}
       </div>
     </>
   );
 };
+
+interface NavbarProps {
+  isMobile: boolean;
+  linkSelected: null | number;
+  setLinkSelected: Dispatch<SetStateAction<null | number>>;
+  data: any;
+}

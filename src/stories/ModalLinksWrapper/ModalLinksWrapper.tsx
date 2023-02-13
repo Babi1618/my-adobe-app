@@ -1,11 +1,11 @@
 import { ModalLink } from "../ModalLink/ModalLink";
 import { StyledModalLinksWrapper } from "./ModalLinksWrapper.styled";
 
-export const ModalLinksWrapper = ({ links }: any) => {
+export const ModalLinksWrapper = ({ links }: ModalLinksWrapperProps) => {
   const handleClick = (text: string) => {
     console.log(text);
   };
-
+  console.log(links);
   return (
     <StyledModalLinksWrapper>
       {links.map((el: any, i: number) => {
@@ -26,3 +26,7 @@ export const ModalLinksWrapper = ({ links }: any) => {
     </StyledModalLinksWrapper>
   );
 };
+
+interface ModalLinksWrapperProps {
+  links: any;
+}
