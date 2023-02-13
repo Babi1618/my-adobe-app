@@ -11,10 +11,10 @@ export default {
   },
 } as ComponentMeta<typeof Navlink>;
 
-const Template: ComponentStory<typeof Navlink> = (args) => (
-  <Navlink {...args} />
-);
-
+const Template: ComponentStory<typeof Navlink> = (args) => {
+  console.log(args);
+  return <Navlink {...args} />;
+};
 export const Default = Template.bind({});
 Default.args = {
   text: "Navlink",

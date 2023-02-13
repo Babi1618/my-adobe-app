@@ -9,6 +9,7 @@ export const Navlink = ({
   setLinkSelected = null,
   onClick,
 }: NavlinkProps) => {
+
   const handleClick = useCallback(
     (
       id: number | null,
@@ -19,7 +20,7 @@ export const Navlink = ({
           prev ? (prev === id ? null : id) : id
         );
     },
-    [id, setLinkSelected]
+    [linkSelected]
   );
 
   return (
