@@ -22,6 +22,7 @@ function App() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  
   return (
     <>
       <Navbar

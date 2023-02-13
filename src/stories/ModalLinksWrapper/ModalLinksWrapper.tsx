@@ -5,7 +5,7 @@ export const ModalLinksWrapper = ({ links }: ModalLinksWrapperProps) => {
   const handleClick = (text: string) => {
     console.log(text);
   };
-  console.log(links);
+
   return (
     <StyledModalLinksWrapper>
       {links.map((el: any, i: number) => {

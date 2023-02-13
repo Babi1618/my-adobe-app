@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useCallback } from "react";
 import "./navlink.css";
 
 export const Navlink = ({
@@ -10,15 +10,18 @@ export const Navlink = ({
   onClick,
 }: NavlinkProps) => {
   
-  const handleClick = (
-    id: number | null,
-    setLinkSelected: Dispatch<SetStateAction<null | number>>
-  ) => {
-    setLinkSelected &&
-      setLinkSelected((prev: null | number) =>
-        prev ? (prev === id ? null : id) : id
-      );
-  };
+  const handleClick = useCallback(
+    (
+      id: number | null,
+      setLinkSelected: Dispatch<SetStateAction<null | number>>
+    ) => {
+      setLinkSelected &&
+        setLinkSelected((prev: null | number) =>
+          prev ? (prev === id ? null : id) : id
+        );
+    },
+    []
+  );
 
   return (
     <div
