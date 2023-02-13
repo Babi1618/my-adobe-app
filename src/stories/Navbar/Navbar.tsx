@@ -64,7 +64,7 @@ export const Navbar = ({
               <SearchIcon />
             </div>
           )}
-          {/* <Navlink text="Sign In" onClick={() => console.log("Sign in")} /> */}
+          <Navlink text="Sign In" onClick={() => console.log("Sign in")} />
         </div>
         {}
         {linkSelected && (

@@ -14,7 +14,6 @@ export default {
 } as ComponentMeta<typeof Navlink>;
 
 const Template: ComponentStory<typeof Navlink> = (args) => {
-
   return <Navlink {...args} />;
 };
 
