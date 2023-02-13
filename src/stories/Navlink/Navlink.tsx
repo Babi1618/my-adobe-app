@@ -9,16 +9,13 @@ export const Navlink = ({
   setLinkSelected = null,
   onClick,
 }: NavlinkProps) => {
-
   const handleClick = useCallback(
     (
       id: number | null,
       setLinkSelected: Dispatch<SetStateAction<null | number>>
     ) => {
       setLinkSelected &&
-        setLinkSelected((prev: null | number) =>
-          prev ? (prev === id ? null : id) : id
-        );
+        setLinkSelected((prev: null | number) => (prev === id ? null : id));
     },
     [linkSelected]
   );
