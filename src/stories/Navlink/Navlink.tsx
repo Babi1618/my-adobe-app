@@ -45,6 +45,6 @@ interface NavlinkProps {
   text: string;
   onClick?: any;
   arrowLeft?: boolean;
-  setLinkSelected?: Dispatch<SetStateAction<null | number>> | null;
+  setLinkSelected?: any;
   linkSelected?: null | number;
 }

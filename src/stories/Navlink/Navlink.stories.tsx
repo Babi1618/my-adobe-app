@@ -14,7 +14,14 @@ export default {
 } as ComponentMeta<typeof Navlink>;
 
 const Template: ComponentStory<typeof Navlink> = (args) => {
-  return <Navlink {...args} />;
+  const [linkSelected, setLinkSelected] = useState(1);
+  return (
+    <Navlink
+      {...args}
+      linkSelected={linkSelected}
+      setLinkSelected={setLinkSelected}
+    />
+  );
 };
 
 export const Default = Template.bind({});
